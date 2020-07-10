@@ -50,11 +50,11 @@ class Linear(DQN):
         ##############################################################
         ################YOUR CODE HERE (6-15 lines) ##################
         num_batches = len(self.env.observation_space.states)
-        self.s = tf.placeholder(tf.uint8, (num_batches, state_shape[0], state_shape[1], state_shape[2]))
-        self.a = tf.placeholder(tf.int32, (num_batches))
-        self.r = tf.placeholder(tf.float32, (num_batches))
-        self.sp = tf.placeholder(tf.uint8, (num_batches, state_shape[0], state_shape[1], state_shape[2]))
-        self.done_mask = tf.placeholder(tf.bool, (num_batches))
+        self.s = tf.placeholder(tf.uint8, (None, state_shape[0], state_shape[1], 4))
+        self.a = tf.placeholder(tf.int32, (None))
+        self.r = tf.placeholder(tf.float32, (None))
+        self.sp = tf.placeholder(tf.uint8, (None, state_shape[0], state_shape[1], 4))
+        self.done_mask = tf.placeholder(tf.bool, (None))
         self.lr = tf.placeholder(tf.float32, None)
 
         ##############################################################
@@ -93,7 +93,7 @@ class Linear(DQN):
         ##############################################################
         ################ YOUR CODE HERE - 2-3 lines ################## 
         x = tf.layers.flatten(state, scope)
-        out = tf.layers.dense(x, num_actions, reuse=reuse)
+        out = tf.layers.dense(x, num_actions, name=scope, reuse=reuse)
 
         ##############################################################
         ######################## END YOUR CODE #######################
@@ -180,7 +180,7 @@ class Linear(DQN):
         ##################### YOUR CODE HERE - 4-5 lines #############
         
         done = tf.multiply(tf.cast(self.done_mask, tf.float32), self.r)
-        not_done = tf.multiply(tf.subtract(1.0, tf.cast(self.done_mask, tf.float32)), tf.add(self.r, tf.multiply(self.config.gamma, tf.reduce_max(target_q, axis=1))))
+        not_done = tf.multiply(tf.subtract(1.0, tf.cast(self.done_mask, tf.float32)), tf.add(self.r, tf.multiply(self.config.gamma, tf.reduce_max(target_q))))
         q_samp = tf.add(done, not_done)
         q_s_a = tf.reduce_mean(tf.multiply(q, tf.one_hot(self.a, num_actions)), axis=1)
         self.loss = tf.reduce_mean(tf.squared_difference(q_samp, q_s_a))
@@ -221,8 +221,14 @@ class Linear(DQN):
         """
         ##############################################################
         #################### YOUR CODE HERE - 8-12 lines #############
-
-        pass
+        o = tf.train.AdamOptimizer(self.lr)
+        variables = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=scope)
+        grads = o.compute_gradients(self.loss, variables)
+        if self.config.grad_clip:
+            for i, (grad, vars) in enumerate(grads):
+                tf.clip_by_norm(grad, self.config.clip_val)
+        self.train_op = o.apply_gradients(grads)
+        self.grad_norm = tf.global_norm(grads)
         
         ##############################################################
         ######################## END YOUR CODE #######################
