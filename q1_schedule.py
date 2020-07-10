@@ -37,10 +37,13 @@ class LinearSchedule(object):
         ##############################################################
         ################ YOUR CODE HERE - 3-4 lines ################## 
 
+        height = self.eps_begin - self.eps_end
+        step = height / self.nsteps
+        if t <= self.nsteps:
+            self.epsilon = self.eps_begin - t * step
+        else:
+            self.epsilon = self.eps_end
 
-        k = min(1, t / self.nsteps)
-        one_minus_eps = k * (self.eps_begin - self.eps_end)
-        self.epsilon = 1 - one_minus_eps
 
         ##############################################################
         ######################## END YOUR CODE ############## ########

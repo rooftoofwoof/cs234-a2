@@ -92,9 +92,8 @@ class Linear(DQN):
         """
         ##############################################################
         ################ YOUR CODE HERE - 2-3 lines ################## 
-        x = tf.layers.flatten(state, scope)
+        x = tf.layers.flatten(state)
         out = tf.layers.dense(x, num_actions, name=scope, reuse=reuse)
-
         ##############################################################
         ######################## END YOUR CODE #######################
 
@@ -179,12 +178,12 @@ class Linear(DQN):
         ##############################################################
         ##################### YOUR CODE HERE - 4-5 lines #############
         
-        done = tf.multiply(tf.cast(self.done_mask, tf.float32), self.r)
-        not_done = tf.multiply(tf.subtract(1.0, tf.cast(self.done_mask, tf.float32)), tf.add(self.r, tf.multiply(self.config.gamma, tf.reduce_max(target_q))))
-        q_samp = tf.add(done, not_done)
-        q_s_a = tf.reduce_mean(tf.multiply(q, tf.one_hot(self.a, num_actions)), axis=1)
-        self.loss = tf.reduce_mean(tf.squared_difference(q_samp, q_s_a))
-
+        done = tf.cast(self.done_mask, tf.float32) * self.r
+        not_done = (1.0 - tf.cast(self.done_mask, tf.float32)) * (self.r + (self.config.gamma * tf.reduce_max(target_q, reduction_indices=[1])))
+        q_samp = done + not_done
+        q_s_a = tf.reduce_sum(q * tf.one_hot(self.a, num_actions, axis=-1), reduction_indices=[1])
+        self.loss = tf.reduce_mean(tf.squared_difference(q_samp, q_s_a), reduction_indices=[0])
+        print(q_samp)
         ##############################################################
         ######################## END YOUR CODE #######################
 
