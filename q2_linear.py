@@ -177,13 +177,11 @@ class Linear(DQN):
         """
         ##############################################################
         ##################### YOUR CODE HERE - 4-5 lines #############
-        
         done = tf.cast(self.done_mask, tf.float32) * self.r
-        not_done = (1.0 - tf.cast(self.done_mask, tf.float32)) * (self.r + (self.config.gamma * tf.reduce_max(target_q, reduction_indices=[1])))
+        not_done = (1.0 - tf.cast(self.done_mask, tf.float32)) * (self.r + (self.config.gamma * tf.reduce_max(target_q, axis=1)))
         q_samp = done + not_done
-        q_s_a = tf.reduce_sum(q * tf.one_hot(self.a, num_actions, axis=-1), reduction_indices=[1])
-        self.loss = tf.reduce_mean(tf.squared_difference(q_samp, q_s_a), reduction_indices=[0])
-        print(q_samp)
+        q_s_a = tf.reduce_sum(q * tf.one_hot(self.a, num_actions, axis=1), axis=1)
+        self.loss = tf.reduce_mean(tf.squared_difference(q_samp, q_s_a))
         ##############################################################
         ######################## END YOUR CODE #######################
 
