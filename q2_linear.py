@@ -49,7 +49,6 @@ class Linear(DQN):
         """
         ##############################################################
         ################YOUR CODE HERE (6-15 lines) ##################
-        num_batches = len(self.env.observation_space.states)
         self.s = tf.placeholder(tf.uint8, (None, state_shape[0], state_shape[1], 4))
         self.a = tf.placeholder(tf.int32, (None))
         self.r = tf.placeholder(tf.float32, (None))
