@@ -1,0 +1,145 @@
+2020-07-12 05:31:27,631:WARNING: From /home/ec2-user/dev/cs234-a2/q2_linear.py:52: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-07-12 05:31:27,636:WARNING: From /home/ec2-user/dev/cs234-a2/q3_nature.py:58: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-07-12 05:31:27,637:WARNING: From /home/ec2-user/dev/cs234-a2/q3_nature.py:59: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+2020-07-12 05:31:27,637:WARNING: From /home/ec2-user/dev/cs234-a2/.env/lib/python3.7/site-packages/tensorflow_core/python/layers/convolutional.py:424: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+2020-07-12 05:31:27,673:WARNING: From /home/ec2-user/dev/cs234-a2/q3_nature.py:62: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-07-12 05:31:27,678:WARNING: From /home/ec2-user/dev/cs234-a2/q3_nature.py:63: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.Dense instead.
+2020-07-12 05:31:27,759:WARNING: From /home/ec2-user/dev/cs234-a2/q2_linear.py:138: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+2020-07-12 05:31:27,759:WARNING: From /home/ec2-user/dev/cs234-a2/q2_linear.py:138: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+2020-07-12 05:31:27,759:WARNING: From /home/ec2-user/dev/cs234-a2/q2_linear.py:141: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+2020-07-12 05:31:27,773:WARNING: From /home/ec2-user/dev/cs234-a2/q2_linear.py:183: The name tf.squared_difference is deprecated. Please use tf.math.squared_difference instead.
+
+2020-07-12 05:31:27,776:WARNING: From /home/ec2-user/dev/cs234-a2/q2_linear.py:220: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2020-07-12 05:31:27,845:WARNING: From /home/ec2-user/dev/cs234-a2/.env/lib/python3.7/site-packages/tensorflow_core/python/ops/clip_ops.py:172: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-07-12 05:31:27,991:WARNING: From /home/ec2-user/dev/cs234-a2/q2_linear.py:227: The name tf.global_norm is deprecated. Please use tf.linalg.global_norm instead.
+
+2020-07-12 05:31:28,004:WARNING: From /home/ec2-user/dev/cs234-a2/core/deep_q_learning.py:100: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-07-12 05:31:28,031:WARNING: From /home/ec2-user/dev/cs234-a2/core/deep_q_learning.py:132: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+2020-07-12 05:31:28,038:WARNING: From /home/ec2-user/dev/cs234-a2/core/deep_q_learning.py:147: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+2020-07-12 05:31:28,039:WARNING: From /home/ec2-user/dev/cs234-a2/core/deep_q_learning.py:148: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-07-12 05:31:28,095:WARNING: From /home/ec2-user/dev/cs234-a2/core/deep_q_learning.py:106: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2020-07-12 05:31:28,238:WARNING: From /home/ec2-user/dev/cs234-a2/core/deep_q_learning.py:113: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-07-12 05:31:29,589:INFO: Evaluating...
+2020-07-12 05:32:11,105:INFO: Average reward: -20.98 +/- 0.02
+2020-07-12 06:02:06,130:INFO: Evaluating...
+2020-07-12 06:03:26,887:INFO: Average reward: -17.82 +/- 0.19
+2020-07-12 06:03:26,888:INFO: Recording...
+2020-07-12 06:37:48,951:INFO: Evaluating...
+2020-07-12 06:39:32,201:INFO: Average reward: -15.70 +/- 0.28
+2020-07-12 06:39:32,202:INFO: Recording...
+2020-07-12 07:14:12,775:INFO: Evaluating...
+2020-07-12 07:16:13,763:INFO: Average reward: -14.64 +/- 0.37
+2020-07-12 07:16:13,764:INFO: Recording...
+2020-07-12 07:50:07,494:INFO: Evaluating...
+2020-07-12 07:52:46,438:INFO: Average reward: -12.40 +/- 0.50
+2020-07-12 07:52:46,439:INFO: Recording...
+2020-07-12 08:27:22,932:INFO: Evaluating...
+2020-07-12 08:30:29,246:INFO: Average reward: -10.44 +/- 0.58
+2020-07-12 08:30:29,247:INFO: Recording...
+2020-07-12 09:04:55,878:INFO: Evaluating...
+2020-07-12 09:07:45,561:INFO: Average reward: -10.06 +/- 0.56
+2020-07-12 09:07:45,561:INFO: Recording...
+2020-07-12 09:41:41,018:INFO: Evaluating...
+2020-07-12 09:44:57,933:INFO: Average reward: -9.26 +/- 0.60
+2020-07-12 09:44:57,934:INFO: Recording...
+2020-07-12 10:19:02,845:INFO: Evaluating...
+2020-07-12 10:22:24,066:INFO: Average reward: -7.02 +/- 0.81
+2020-07-12 10:22:24,067:INFO: Recording...
+2020-07-12 10:56:39,926:INFO: Evaluating...
+2020-07-12 11:00:05,123:INFO: Average reward: -7.84 +/- 0.66
+2020-07-12 11:00:05,124:INFO: Recording...
+2020-07-12 11:34:36,154:INFO: Evaluating...
+2020-07-12 11:38:01,354:INFO: Average reward: -6.86 +/- 1.00
+2020-07-12 11:38:01,355:INFO: Recording...
+2020-07-12 12:12:34,571:INFO: Evaluating...
+2020-07-12 12:15:59,501:INFO: Average reward: -6.62 +/- 0.76
+2020-07-12 12:15:59,502:INFO: Recording...
+2020-07-12 12:51:40,379:INFO: Evaluating...
+2020-07-12 12:55:12,708:INFO: Average reward: -4.92 +/- 0.83
+2020-07-12 12:55:12,709:INFO: Recording...
+2020-07-12 13:30:18,852:INFO: Evaluating...
+2020-07-12 13:33:59,783:INFO: Average reward: -3.24 +/- 0.84
+2020-07-12 13:33:59,785:INFO: Recording...
+2020-07-12 14:07:05,875:INFO: Evaluating...
+2020-07-12 14:10:52,460:INFO: Average reward: -3.06 +/- 0.92
+2020-07-12 14:10:52,461:INFO: Recording...
+2020-07-12 14:46:06,722:INFO: Evaluating...
+2020-07-12 14:49:52,196:INFO: Average reward: -1.68 +/- 0.82
+2020-07-12 14:49:52,197:INFO: Recording...
+2020-07-12 15:23:19,171:INFO: Evaluating...
+2020-07-12 15:26:46,812:INFO: Average reward: -3.58 +/- 0.77
+2020-07-12 15:26:46,813:INFO: Recording...
+2020-07-12 16:00:54,992:INFO: Evaluating...
+2020-07-12 16:04:40,911:INFO: Average reward: -0.36 +/- 0.86
+2020-07-12 16:04:40,912:INFO: Recording...
+2020-07-12 16:38:26,079:INFO: Evaluating...
+2020-07-12 16:42:01,127:INFO: Average reward: -0.26 +/- 0.93
+2020-07-12 16:42:01,128:INFO: Recording...
+2020-07-12 17:16:25,739:INFO: Evaluating...
+2020-07-12 17:20:04,287:INFO: Average reward: -1.44 +/- 0.94
+2020-07-12 17:20:04,288:INFO: Recording...
+2020-07-12 17:53:11,662:INFO: - Training done.
+2020-07-12 17:53:11,711:INFO: Evaluating...
+2020-07-12 17:56:35,343:INFO: Average reward: -1.34 +/- 0.91
+2020-07-12 17:56:35,369:DEBUG: findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0.
+2020-07-12 17:56:35,369:DEBUG: findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Oblique.ttf) oblique normal 400 normal>) = 11.05
+2020-07-12 17:56:35,369:DEBUG: findfont: score(<Font 'STIXGeneral' (STIXGeneralItalic.ttf) italic normal 400 normal>) = 11.05
+2020-07-12 17:56:35,369:DEBUG: findfont: score(<Font 'STIXGeneral' (STIXGeneral.ttf) normal normal regular normal>) = 10.05
+2020-07-12 17:56:35,369:DEBUG: findfont: score(<Font 'STIXSizeFourSym' (STIXSizFourSymBol.ttf) normal normal 700 normal>) = 10.335
+2020-07-12 17:56:35,369:DEBUG: findfont: score(<Font 'STIXSizeThreeSym' (STIXSizThreeSymReg.ttf) normal normal regular normal>) = 10.05
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'STIXNonUnicode' (STIXNonUniBol.ttf) normal normal 700 normal>) = 10.335
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'cmtt10' (cmtt10.ttf) normal normal 400 normal>) = 10.05
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'STIXSizeOneSym' (STIXSizOneSymReg.ttf) normal normal regular normal>) = 10.05
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Bold.ttf) normal normal 700 normal>) = 10.335
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'STIXNonUnicode' (STIXNonUniBolIta.ttf) italic normal 700 normal>) = 11.335
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono.ttf) normal normal 400 normal>) = 10.05
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'DejaVu Sans Display' (DejaVuSansDisplay.ttf) normal normal 400 normal>) = 10.05
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'STIXSizeThreeSym' (STIXSizThreeSymBol.ttf) normal normal 700 normal>) = 10.335
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'cmex10' (cmex10.ttf) normal normal 400 normal>) = 10.05
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'DejaVu Sans' (DejaVuSans.ttf) normal normal 400 normal>) = 0.05
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'DejaVu Serif Display' (DejaVuSerifDisplay.ttf) normal normal 400 normal>) = 10.05
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'cmsy10' (cmsy10.ttf) normal normal 400 normal>) = 10.05
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Italic.ttf) italic normal 400 normal>) = 11.05
+2020-07-12 17:56:35,370:DEBUG: findfont: score(<Font 'cmb10' (cmb10.ttf) normal normal 400 normal>) = 10.05
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'STIXSizeTwoSym' (STIXSizTwoSymReg.ttf) normal normal regular normal>) = 10.05
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'STIXNonUnicode' (STIXNonUniIta.ttf) italic normal 400 normal>) = 11.05
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'STIXGeneral' (STIXGeneralBolIta.ttf) italic normal 700 normal>) = 11.335
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'cmmi10' (cmmi10.ttf) normal normal 400 normal>) = 10.05
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'cmss10' (cmss10.ttf) normal normal 400 normal>) = 10.05
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'STIXSizeOneSym' (STIXSizOneSymBol.ttf) normal normal 700 normal>) = 10.335
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'STIXSizeTwoSym' (STIXSizTwoSymBol.ttf) normal normal 700 normal>) = 10.335
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'STIXSizeFiveSym' (STIXSizFiveSymReg.ttf) normal normal regular normal>) = 10.05
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Bold.ttf) normal normal 700 normal>) = 0.33499999999999996
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Bold.ttf) normal normal 700 normal>) = 10.335
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'cmr10' (cmr10.ttf) normal normal 400 normal>) = 10.05
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'STIXSizeFourSym' (STIXSizFourSymReg.ttf) normal normal regular normal>) = 10.05
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'DejaVu Serif' (DejaVuSerif.ttf) normal normal 400 normal>) = 10.05
+2020-07-12 17:56:35,371:DEBUG: findfont: score(<Font 'STIXGeneral' (STIXGeneralBol.ttf) normal normal 700 normal>) = 10.335
+2020-07-12 17:56:35,372:DEBUG: findfont: score(<Font 'DejaVu Sans' (DejaVuSans-BoldOblique.ttf) oblique normal 700 normal>) = 1.335
+2020-07-12 17:56:35,372:DEBUG: findfont: score(<Font 'STIXNonUnicode' (STIXNonUni.ttf) normal normal regular normal>) = 10.05
+2020-07-12 17:56:35,372:DEBUG: findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Oblique.ttf) oblique normal 400 normal>) = 1.05
+2020-07-12 17:56:35,372:DEBUG: findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/home/ec2-user/dev/cs234-a2/.env/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
